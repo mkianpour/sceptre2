@@ -1,4 +1,3 @@
-#FROM python:3.8-slim
 FROM python:3.8-alpine
 WORKDIR /usr/src/app
 
@@ -22,5 +21,4 @@ RUN kustomize_package=kustomize_v3.3.0_linux_amd64.tar.gz; \
     mv ./kustomize /usr/local/bin/kustomize
 
 RUN rm -rf /var/lib/apt/lists/*
-#COPY . .
 CMD ["sceptre", "--version"]
